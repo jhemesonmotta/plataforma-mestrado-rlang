@@ -1,0 +1,93 @@
+---
+title: "Obversações Base Dissertação"
+author: "Jhemeson Silva Mota"
+date: "15 de Julho de 2020"
+output:
+  html_document:
+    highlight: pygments
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(ggplot2)
+```
+
+
+**Carrega os dados do CSV para o DataFrame:**
+
+```{r}
+gh_data <- read.csv(file="dados_projetos.csv", header=TRUE, sep=";")
+
+```
+
+## Gráficos:
+
+### Boxplot 1: frequencia de commits
+
+```{r}
+boxplot(gh_data$frequenciaCommits)
+```
+
+
+### Boxplot 2: tamanho da comunidade
+
+```{r}
+boxplot(gh_data$tamanhoComunidade)
+```
+
+### Boxplot 3: quantidade de contribuintes
+
+```{r}
+boxplot(gh_data$qtdContribuintes)
+```
+
+### Boxplot 4: quantidade de commits
+
+```{r}
+boxplot(gh_data$qtdCommits)
+```
+
+### Boxplot 5: correlação de tamanho
+
+```{r}
+boxplot(gh_data$correlacaoTamanho)
+```
+
+### Boxplot 6: qualidade total
+
+```{r}
+boxplot(gh_data$qualidade_total)
+```
+
+### Boxplot 7: qualidade acessibilidade
+
+```{r}
+boxplot(gh_data$qualidade_accesibilidade)
+```
+
+### Boxplot 8: qualidade melhores praticas
+
+```{r}
+boxplot(gh_data$qualidade_melhoresPraticas)
+```
+
+### Boxplot 9: qualidade performance
+
+```{r}
+boxplot(gh_data$qualidade_performance)
+```
+
+
+### Boxplot 10: qualidade PWA
+
+```{r}
+boxplot(gh_data$qualidade_pwa)
+```
+
+### Boxplot 11: qualidade SEO
+
+```{r}
+boxplot(gh_data$qualidade_seo)
+```
