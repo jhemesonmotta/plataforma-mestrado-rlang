@@ -11,6 +11,7 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(dplyr)
+library(plyr)
 library(ggplot2)
 ```
 
@@ -23,6 +24,13 @@ gh_data <- read.csv(file="dados_projetos.csv", header=TRUE, sep=";")
 ```
 
 ## Gráficos:
+
+### Barchart 1: Frequência absoluta de projetos pro linguagem
+
+```{r}
+barplot(gh_data$linguagemProgramacao)
+```
+
 
 ### Boxplot 1: frequencia de commits
 
