@@ -52,67 +52,67 @@ barplot(comunidade_por_linguagem$tamanhoComunidade,names.arg = comunidade_por_li
 ### Boxplot 1: frequencia de commits
 
 ```{r}
-boxplot(gh_data$frequenciaCommits)
-```
+boxplot(frequenciaCommits~linguagemProgramacao, data = gh_data, outline=FALSE, las=2, xlab="", ylab="")
 
+```
 
 ### Boxplot 2: tamanho da comunidade
 
 ```{r}
-boxplot(gh_data$tamanhoComunidade)
+boxplot(gh_data$tamanhoComunidade~linguagemProgramacao, data = gh_data, outline=FALSE, las=2, xlab="", ylab="")
 ```
 
 ### Boxplot 3: quantidade de contribuintes
 
 ```{r}
-boxplot(gh_data$qtdContribuintes)
+boxplot(gh_data$qtdContribuintes~linguagemProgramacao, data = gh_data, outline=FALSE, las=2, xlab="", ylab="")
 ```
 
 ### Boxplot 4: quantidade de commits
 
 ```{r}
-boxplot(gh_data$qtdCommits)
+boxplot(gh_data$qtdCommits~linguagemProgramacao, data = gh_data, outline=FALSE, las=2, xlab="", ylab="")
 ```
 
 ### Boxplot 5: correlação de tamanho
 
 ```{r}
-boxplot(gh_data$correlacaoTamanho)
+boxplot(gh_data$correlacaoTamanho~linguagemProgramacao, data = gh_data, outline=FALSE, las=2, xlab="", ylab="")
 ```
 
 ### Boxplot 6: qualidade total
 
 ```{r}
-boxplot(gh_data$qualidade_total)
+boxplot(gh_data$qualidade_total~linguagemProgramacao, data = gh_data, outline=FALSE, las=2, xlab="", ylab="")
 ```
 
 ### Boxplot 7: qualidade acessibilidade
 
 ```{r}
-boxplot(gh_data$qualidade_accesibilidade)
+boxplot(gh_data$qualidade_accesibilidade~linguagemProgramacao, data = gh_data, outline=FALSE, las=2, xlab="", ylab="")
 ```
 
 ### Boxplot 8: qualidade melhores praticas
 
 ```{r}
-boxplot(gh_data$qualidade_melhoresPraticas)
+boxplot(gh_data$qualidade_melhoresPraticas~linguagemProgramacao, data = gh_data, outline=FALSE, las=2, xlab="", ylab="")
 ```
 
 ### Boxplot 9: qualidade performance
 
 ```{r}
-boxplot(gh_data$qualidade_performance)
+boxplot(gh_data$qualidade_performance~linguagemProgramacao, data = gh_data, outline=FALSE, las=2, xlab="", ylab="")
 ```
 
 
 ### Boxplot 10: qualidade PWA
 
 ```{r}
-boxplot(gh_data$qualidade_pwa)
+boxplot(gh_data$qualidade_pwa~linguagemProgramacao, data = gh_data, outline=FALSE, las=2, xlab="", ylab="")
 ```
 
 ### Boxplot 11: qualidade SEO
 
 ```{r}
-boxplot(gh_data$qualidade_seo)
+boxplot(gh_data$qualidade_seo~linguagemProgramacao, data = gh_data, outline=FALSE, las=2, xlab="", ylab="")
 ```
