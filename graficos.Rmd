@@ -24,6 +24,7 @@ gh_data <- read.csv(file="dados_projetos.csv", header=TRUE, sep=";")
 
 ## Gráficos:
 
+
 ### Barchart 1: Frequência absoluta de projetos pro linguagem
 
 ```{r}
