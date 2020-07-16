@@ -20,7 +20,6 @@ library(ggplot2)
 
 ```{r}
 gh_data <- read.csv(file="dados_projetos.csv", header=TRUE, sep=";")
-
 ```
 
 ## Gráficos:
@@ -28,9 +27,26 @@ gh_data <- read.csv(file="dados_projetos.csv", header=TRUE, sep=";")
 ### Barchart 1: Frequência absoluta de projetos pro linguagem
 
 ```{r}
-barplot(gh_data$linguagemProgramacao)
+countLangs <- count(gh_data$linguagemProgramacao)
+barplot(countLangs$freq, xlab="Linguagem",ylab="Quantidade",names.arg = countLangs$x)
 ```
 
+### Barchart 2: Mediana da qualidade por linguagem
+```{r}
+qualidade_por_linguagem <- data.frame(aggregate( qualidade_total ~ linguagemProgramacao, gh_data, median ))
+
+barplot(qualidade_por_linguagem$qualidade_total,names.arg = qualidade_por_linguagem$linguagemProgramacao, las=2)
+```
+
+
+### Barchart 3: Mediana do tamanho da comunidade por linguagem
+
+```{r}
+comunidade_por_linguagem <- data.frame(aggregate( tamanhoComunidade ~ linguagemProgramacao, gh_data, median ))
+
+
+barplot(comunidade_por_linguagem$tamanhoComunidade,names.arg = comunidade_por_linguagem$linguagemProgramacao, las=2)
+```
 
 ### Boxplot 1: frequencia de commits
 
