@@ -181,9 +181,9 @@ pie(idade_valores, idade_labels, border="white", col=listaCores)
 ### Experiência
 
 ```{r}
-xp_valores <- c(1.9,1.9,5.7,13.2,17,28.3,32.1)
+xp_valores <- c(1.9,5.7,13.2,18.9,28.3,32.1)
 
-xp_labels <- c("Até 5 anos", "Entre 8 e 10 anos", "Entre 10 e 15 anos", "Até 1 ano", "Entre 5 e 7 anos", "Mais de 15 anos", "Entre 2 e 4 anos")
+xp_labels <- c("Entre 8 e 10 anos", "Entre 10 e 15 anos", "Até 1 ano", "Entre 5 e 7 anos", "Mais de 15 anos", "Entre 2 e 4 anos")
 
 pie(xp_valores, xp_labels, border="white", col=listaCores)
 
