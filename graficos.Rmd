@@ -116,3 +116,31 @@ boxplot(gh_data$qualidade_pwa~linguagemProgramacao, data = gh_data, outline=FALS
 ```{r}
 boxplot(gh_data$qualidade_seo~linguagemProgramacao, data = gh_data, outline=FALSE, las=2, xlab="", ylab="")
 ```
+
+## INÍCIO DOS GRÁFICOS DOS FORMULÁRIOS DE GAMIFICAÇÃO ##
+
+### Faixa etária
+
+```{r}
+listaCores <- c("grey90","grey80","grey70","grey60","grey50","grey40","grey30","grey20", "grey15","grey10","grey5","grey0")
+
+faixa_etaria_valores <- c(2.9,20.3,23.2,26.1,27.5)
+
+faixa_etaria_labels <- c("Até 19 anos","20 a 24 anos","25 a 29 anos","30 a 39 anos","40 ou mais")
+
+pie(faixa_etaria_valores, faixa_etaria_labels, border="white", col=listaCores)
+
+```
+
+### Tempo de experiência
+
+```{r}
+xp_valores <- c(21.7,33.3,44.9)
+
+xp_labels <- c("Até 5 anos","Até 10 anos","10 anos ou mais")
+
+pie(xp_valores, xp_labels, border="white", col=listaCores)
+
+```
+
+
